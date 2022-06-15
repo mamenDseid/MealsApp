@@ -1,13 +1,23 @@
 import camelize from "camelize";
 import { host, isMock } from "../../utils/env";
+import {mocks} from './mock'
+
+
 
 export const restaurantsRequest = (location) => {
-  return fetch(`${host}/placesNearby?location=${location}&mock=${isMock}`).then(
-    (res) => {
-      return res.json();
-    }
-  );
+  return new Promise((resolve, reject)=> {
+const mock = mocks[location]
+
+if(!mock){
+  reject('not found')
+}
+
+resolve(mock)
+  })
+ 
 };
+
+
 /*
 
 export const restaurantsRequest = (location) => {
@@ -16,6 +26,20 @@ export const restaurantsRequest = (location) => {
       return res.json();
     }
   );
+};
+
+
+export const restaurantsRequest = (location) => {
+  return new Promise((resolve, reject)=> {
+const mock = mocks[location]
+
+if(!mock){
+  reject('not found')
+}
+
+resolve(mock)
+  })
+ 
 };
 
 
