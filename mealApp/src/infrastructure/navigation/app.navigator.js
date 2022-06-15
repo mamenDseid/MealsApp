@@ -10,7 +10,7 @@ import { CartContextProvider } from "../../services/cart/cart.context";
 import { RestaurantsContextProvider } from "../../services/restaurants/restaurants.context";
 import { LocationContextProvider } from "../../services/location/location.context";
 import { FavouritesContextProvider } from "../../services/favourites/favourites.context";
-import { colors } from "../../infrastructure/theme/colors";
+import { colors } from "../theme/colors";
 
 const Tab = createBottomTabNavigator();
 
