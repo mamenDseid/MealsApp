@@ -18,3 +18,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+
+//git remote add origin https://github.com/mamenDseid/MealsApp.git
+//git branch -M main
+//git push -u origin main
