@@ -8,7 +8,18 @@ export const restaurantsRequest = (location) => {
     }
   );
 };
+/*
 
+export const restaurantsRequest = (location) => {
+  return fetch(`${host}/placesNearby?location=${location}&mock=${isMock}`).then(
+    (res) => {
+      return res.json();
+    }
+  );
+};
+
+
+*/
 export const restaurantsTransform = ({ results = [] }) => {
   const mappedResults = results.map((restaurant) => {
     return {
